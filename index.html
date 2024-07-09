@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Hire Services - Dunedin City</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Van Hire Services - Dunedin City</h1>
+        <p>Affordable and flexible van hire solutions for all your moving needs.</p>
+    </header>
+
+    <section class="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-container">
+            <div class="pricing-box">
+                <h3>Hourly Rate</h3>
+                <p>$50 per hour</p>
+            </div>
+            <div class="pricing-box">
+                <h3>Daily Rate</h3>
+                <p>$150 per day</p>
+            </div>
+            <div class="pricing-box">
+                <h3>Discount Rate</h3>
+                <p>Contact us for small items (e.g., washing machine) for discount rates</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking">
+        <h2>Book Your Van</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="booking-date">Select Date:</label>
+            <input type="date" id="booking-date" name="booking-date" required>
+
+            <label for="booking-type">Select Duration:</label>
+            <select id="booking-type" name="booking-type" required>
+                <option value="hourly">Hourly</option>
+                <option value="daily">Daily</option>
+                <option value="long-term">Long-Term</option>
+                <option value="small-items">Small Items</option>
+            </select>
+
+            <label for="hours">Number of Hours (if hourly):</label>
+            <input type="number" id="hours" name="hours" min="1">
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" placeholder="Any special requests or comments?"></textarea>
+
+            <p>No bookings are confirmed until you receive a confirmation email. This will happen within 24 hours. If you need a sooner response, please mention it in the comments.</p>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Van Hire Services - Dunedin City</p>
+    </footer>
+</body>
+</html>
