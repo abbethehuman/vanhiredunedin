@@ -12,32 +12,40 @@
         <p>Affordable and flexible van hire solutions for all your moving needs.</p>
     </header>
 
+    <section class="hero">
+        <img src="images/dunedin.jpg" alt="Dunedin City">
+    </section>
+
     <section class="pricing">
         <h2>Pricing</h2>
         <div class="pricing-container">
             <div class="pricing-box">
                 <h3>Hourly Rate</h3>
                 <p>$50 per hour</p>
+                <img src="images/van_hourly.jpg" alt="Van Hourly Rate">
             </div>
             <div class="pricing-box">
                 <h3>Daily Rate</h3>
                 <p>$150 per day</p>
+                <img src="images/van_daily.jpg" alt="Van Daily Rate">
             </div>
             <div class="pricing-box">
                 <h3>Discount Rate</h3>
                 <p>Contact us for small items (e.g., washing machine) for discount rates</p>
+                <img src="images/van_small.jpg" alt="Van for Small Items">
             </div>
         </div>
     </section>
 
     <section class="booking">
         <h2>Book Your Van</h2>
-        <form action="submit_form.php" method="POST">
+        <!-- Formspree Form -->
+        <form action="https://formspree.io/f/xdknoqvk" method="POST">
             <label for="booking-date">Select Date:</label>
-            <input type="date" id="booking-date" name="booking-date" required>
+            <input type="date" id="booking-date" name="booking_date" required>
 
             <label for="booking-type">Select Duration:</label>
-            <select id="booking-type" name="booking-type" required>
+            <select id="booking-type" name="booking_type" required>
                 <option value="hourly">Hourly</option>
                 <option value="daily">Daily</option>
                 <option value="long-term">Long-Term</option>
@@ -54,6 +62,7 @@
 
             <button type="submit">Submit Booking</button>
         </form>
+        <!-- End of Formspree Form -->
     </section>
 
     <footer>
@@ -61,3 +70,4 @@
     </footer>
 </body>
 </html>
+
