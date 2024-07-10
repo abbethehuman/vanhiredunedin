@@ -4,7 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Van Hire Services - Dunedin City</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, section, footer {
+            padding: 20px;
+            text-align: center;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .pricing-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 30%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form label, form input, form select, form textarea, form button {
+            margin-bottom: 10px;
+            width: 80%;
+        }
+        form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,7 +48,7 @@
     </header>
 
     <section class="hero">
-        <img src="images/dunedin.jpg" alt="Dunedin City">
+        <img src="images/dunedin.jpg" alt="Dunedin City" style="width: 100%;">
     </section>
 
     <section class="pricing">
@@ -22,17 +57,17 @@
             <div class="pricing-box">
                 <h3>Hourly Rate</h3>
                 <p>$50 per hour</p>
-                <img src="images/van_hourly.jpg" alt="Van Hourly Rate">
+                <img src="images/van_hourly.jpg" alt="Van Hourly Rate" style="width: 100%;">
             </div>
             <div class="pricing-box">
                 <h3>Daily Rate</h3>
                 <p>$150 per day</p>
-                <img src="images/van_daily.jpg" alt="Van Daily Rate">
+                <img src="images/van_daily.jpg" alt="Van Daily Rate" style="width: 100%;">
             </div>
             <div class="pricing-box">
                 <h3>Discount Rate</h3>
                 <p>Contact us for small items (e.g., washing machine) for discount rates</p>
-                <img src="images/van_small.jpg" alt="Van for Small Items">
+                <img src="images/van_small.jpg" alt="Van for Small Items" style="width: 100%;">
             </div>
         </div>
     </section>
@@ -70,5 +105,6 @@
     </footer>
 </body>
 </html>
+
 
 
