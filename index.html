@@ -9,35 +9,79 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         header, section, footer {
             padding: 20px;
             text-align: center;
         }
+        header {
+            background-color: #2c3e50;
+            color: white;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
         .pricing-container {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
         }
         .pricing-box {
             border: 1px solid #ccc;
             padding: 20px;
             width: 30%;
+            margin: 10px;
+            box-sizing: border-box;
+            background-color: #ecf0f1;
+        }
+        .description, .occasions, .contact-free {
+            padding: 20px;
+            background-color: #bdc3c7;
+            margin: 20px 0;
+        }
+        .description {
+            background-color: #a8dadc;
+        }
+        .booking {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        .booking form, .booking .map {
+            width: 45%;
+            margin: 0 20px;
         }
         form {
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
         form label, form input, form select, form textarea, form button {
             margin-bottom: 10px;
-            width: 80%;
+            padding: 10px;
+            box-sizing: border-box;
         }
         form button {
-            padding: 10px 20px;
             background-color: #28a745;
-            color: #fff;
+            color: white;
             border: none;
             cursor: pointer;
+            font-size: 16px;
+        }
+        form button:hover {
+            background-color: #218838;
+        }
+        .map iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
         }
     </style>
 </head>
@@ -48,7 +92,23 @@
     </header>
 
     <section class="hero">
-        <img src="images/dunedin.jpg" alt="Dunedin City" style="width: 100%;">
+        <img src="images/dunedin.jpg" alt="Dunedin City">
+    </section>
+
+    <section class="description">
+        <h2>Why Choose Us?</h2>
+        <p>We are a friendly and convenient option for helping people move things around Dunedin City. Our van hire service is perfect for a variety of occasions and needs.</p>
+    </section>
+
+    <section class="occasions">
+        <h2>When You Might Need Us</h2>
+        <ul>
+            <li>Moving to a new house or apartment</li>
+            <li>Transporting furniture or large items</li>
+            <li>College students moving into dorms</li>
+            <li>Delivering items to friends or family</li>
+            <li>Small business deliveries</li>
+        </ul>
     </section>
 
     <section class="pricing">
@@ -74,30 +134,39 @@
 
     <section class="booking">
         <h2>Book Your Van</h2>
-        <!-- Formspree Form -->
-        <form action="https://formspree.io/f/xdknoqvk" method="POST">
-            <label for="booking-date">Select Date:</label>
-            <input type="date" id="booking-date" name="booking_date" required>
+        <div class="form-container">
+            <!-- Formspree Form -->
+            <form action="https://formspree.io/f/xdknoqvk" method="POST">
+                <label for="booking-date">Select Date:</label>
+                <input type="date" id="booking-date" name="booking_date" required>
 
-            <label for="booking-type">Select Duration:</label>
-            <select id="booking-type" name="booking_type" required>
-                <option value="hourly">Hourly</option>
-                <option value="daily">Daily</option>
-                <option value="long-term">Long-Term</option>
-                <option value="small-items">Small Items</option>
-            </select>
+                <label for="booking-type">Select Duration:</label>
+                <select id="booking-type" name="booking_type" required>
+                    <option value="hourly">Hourly</option>
+                    <option value="daily">Daily</option>
+                    <option value="long-term">Long-Term</option>
+                    <option value="small-items">Small Items</option>
+                </select>
 
-            <label for="hours">Number of Hours (if hourly):</label>
-            <input type="number" id="hours" name="hours" min="1">
+                <label for="hours">Number of Hours (if hourly):</label>
+                <input type="number" id="hours" name="hours" min="1">
 
-            <label for="comments">Comments:</label>
-            <textarea id="comments" name="comments" placeholder="Any special requests or comments?"></textarea>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Any special requests or comments?"></textarea>
 
-            <p>No bookings are confirmed until you receive a confirmation email. This will happen within 24 hours. If you need a sooner response, please mention it in the comments.</p>
+                <p>No bookings are confirmed until you receive a confirmation email. This will happen within 24 hours. If you need a sooner response, please mention it in the comments.</p>
 
-            <button type="submit">Submit Booking</button>
-        </form>
-        <!-- End of Formspree Form -->
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.5937676222983!2d-71.10110578454368!3d42.36510797918654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370a944552c53%3A0x7b6a1f4e7c6e4b67!2sDunedin%2C%20New%20Zealand!5e0!3m2!1sen!2sus!4v1625516029635!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section class="contact-free">
+        <h2>Contact-Free Pickup</h2>
+        <p>All pick-ups are contact-free, utilizing a lockbox for easy and secure access. Our service ensures a smooth and hassle-free experience.</p>
     </section>
 
     <footer>
@@ -105,6 +174,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
