@@ -39,21 +39,25 @@
         }
         .description, .occasions, .contact-free {
             padding: 20px;
-            background-color: #bdc3c7;
             margin: 20px 0;
         }
         .description {
             background-color: #a8dadc;
         }
+        .occasions {
+            background-color: #bdc3c7;
+        }
+        .contact-free {
+            background-color: #b0bec5;
+        }
         .booking {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             padding: 20px;
             background-color: #ecf0f1;
         }
         .booking form, .booking .map {
-            width: 45%;
-            margin: 0 20px;
+            width: 48%;
         }
         form {
             display: flex;
@@ -137,6 +141,15 @@
         <div class="form-container">
             <!-- Formspree Form -->
             <form action="https://formspree.io/f/xdknoqvk" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
                 <label for="booking-date">Select Date:</label>
                 <input type="date" id="booking-date" name="booking_date" required>
 
@@ -174,6 +187,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
