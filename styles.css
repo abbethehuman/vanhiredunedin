@@ -1,80 +1,123 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Hire Services - Dunedin City</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, section, footer {
+            padding: 20px;
+            text-align: center;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .pricing-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 30%;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        form label, form input, form select, form textarea, form button {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form button:hover {
+            background-color: #218838;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Van Hire Services - Dunedin City</h1>
+        <p>Affordable and flexible van hire solutions for all your moving needs.</p>
+    </header>
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+    <section class="hero">
+        <img src="images/dunedin.jpg" alt="Dunedin City">
+    </section>
 
-header h1 {
-    margin: 0;
-}
+    <section class="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-container">
+            <div class="pricing-box">
+                <h3>Hourly Rate</h3>
+                <p>$50 per hour</p>
+                <img src="images/van_hourly.jpg" alt="Van Hourly Rate" style="width: 100%;">
+            </div>
+            <div class="pricing-box">
+                <h3>Daily Rate</h3>
+                <p>$150 per day</p>
+                <img src="images/van_daily.jpg" alt="Van Daily Rate" style="width: 100%;">
+            </div>
+            <div class="pricing-box">
+                <h3>Discount Rate</h3>
+                <p>Contact us for small items (e.g., washing machine) for discount rates</p>
+                <img src="images/van_small.jpg" alt="Van for Small Items" style="width: 100%;">
+            </div>
+        </div>
+    </section>
 
-.pricing {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+    <section class="booking">
+        <h2>Book Your Van</h2>
+        <!-- Formspree Form -->
+        <form action="https://formspree.io/f/xdknoqvk" method="POST">
+            <label for="booking-date">Select Date:</label>
+            <input type="date" id="booking-date" name="booking_date" required>
 
-.pricing-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
+            <label for="booking-type">Select Duration:</label>
+            <select id="booking-type" name="booking_type" required>
+                <option value="hourly">Hourly</option>
+                <option value="daily">Daily</option>
+                <option value="long-term">Long-Term</option>
+                <option value="small-items">Small Items</option>
+            </select>
 
-.pricing-box {
-    background-color: #eee;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 0 10px;
-    width: 200px;
-}
+            <label for="hours">Number of Hours (if hourly):</label>
+            <input type="number" id="hours" name="hours" min="1">
 
-.booking {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" placeholder="Any special requests or comments?"></textarea>
 
-.booking form {
-    display: inline-block;
-    text-align: left;
-    max-width: 500px;
-    margin-top: 20px;
-}
+            <p>No bookings are confirmed until you receive a confirmation email. This will happen within 24 hours. If you need a sooner response, please mention it in the comments.</p>
 
-.booking label {
-    display: block;
-    margin-top: 10px;
-}
+            <button type="submit">Submit Booking</button>
+        </form>
+        <!-- End of Formspree Form -->
+    </section>
 
-.booking input, .booking select, .booking textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-}
+    <footer>
+        <p>&copy; 2024 Van Hire Services - Dunedin City</p>
+    </footer>
+</body>
+</html>
 
-.booking button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
